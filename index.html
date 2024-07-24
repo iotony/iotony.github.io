@@ -1,14 +1,15 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta name="generator" content="Hugo 0.129.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>IOTONY</title>
     <meta name="description"
-        content="My site description">
-    <link rel="canonical" href="http://localhost:1313/" />
+        content="Welcome to IOTONY, the personal blog of Tianning Wang">
+    <link rel="canonical" href="https://iotony.github.io" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     
     <link rel="stylesheet" href="http://localhost:1313/scss/style.min.aa7209164f013c6883aa54384ea45a46e582eacf9a17e9565badebd557dd1059.css">
@@ -16,22 +17,62 @@
     <meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="IOTONY">
   <meta property="og:title" content="IOTONY">
-  <meta property="og:description" content="My site description">
+  <meta property="og:description" content="Welcome to IOTONY, the personal blog of Tianning Wang">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
     
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="IOTONY">
-  <meta name="twitter:description" content="My site description">
+  <meta name="twitter:description" content="Welcome to IOTONY, the personal blog of Tianning Wang">
 
   <style>
+        #home-title {
+            text-transform: none;
+        }
+        .cursive {
+            font-family: 'ZCOOL KuaiLe', cursive;
+        }
+
         .author-avatar {
             width: 10%;
             height: 10%;
             border-radius: 50%;
             object-fit: cover;
-        }        
+        } 
+        
+        .type-writer {
+            font-family: 'ZCOOL KuaiLe', cursive;
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            border-right: 2px solid;
+            animation: caret 0.75s step-end infinite;
+            text-transform: none;
+        }
+
+        .is-centered {
+            text-align: center;
+        }
+
+        .title.subtitle.heading.is-6 {
+            margin-bottom: 30px;
+        }
+
+        .social-icon {
+            margin-top: 30px;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: var(--characters, 1ch); }
+        }
+
+        @keyframes caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
   </style>
     
 
@@ -154,10 +195,10 @@
 
 
 
-                        <h1 id="home-title" class="title is-1 ">What I cannot create, I do not understand.</h1>
-                    <div class="description column content typewriter-effect">
-                        <p id="typed-text"></p>
-                    </div>
+                        <h1 id="home-title" class="title is-2 " class="cursive">What I cannot create, I do not understand.</h1>
+                    
+                        <div id="type-writer" class="type-writer"></div>
+                    
                     <script>
                         const texts = [
                             "你好！我是Tony，很高兴认识你！欢迎来到我的博客。",
@@ -167,29 +208,29 @@
 
                         let currentText = 0;
                         let currentChar = 0;
-                        const typingSpeed = 200; // typing speed in milliseconds
-                        const delayBetweenTexts = 1500; // delay between texts in milliseconds
+                        const typingSpeed = 100; // Typing speed in milliseconds
+                        const delayBetweenTexts = 1500; // Delay between texts in milliseconds
 
-                        const typedTextElement = document.getElementById('typed-text');
-                        typedTextElement.style.setProperty('--characters', typedTextElement.innerHTML.length);
-<!--
+                        const typedTextElement = document.getElementById('type-writer');
+
                         function type() {
                             if (currentChar < texts[currentText].length) {
                                 typedTextElement.textContent += texts[currentText].charAt(currentChar);
                                 currentChar++;
+                                typedTextElement.style.setProperty('--characters', `${typedTextElement.textContent.length}ch`);
                                 setTimeout(type, typingSpeed);
                             } else {
                                 setTimeout(() => {
-                                    typedTextElement.textContent = '';
-                                    currentChar = 0;
                                     currentText = (currentText + 1) % texts.length;
+                                    currentChar = 0;
+                                    typedTextElement.textContent = '';
                                     setTimeout(type, typingSpeed);
                                 }, delayBetweenTexts);
                             }
                         }
 
-                        type();
--->                        
+                        typedTextElement.style.setProperty('--characters', '0ch');
+                        type();                      
                     </script>
 
                     <div class="social-icon">
@@ -225,7 +266,7 @@
     <hr>
 <section class="pagination" >
     
-    <label class="pag-link">Homepage</label>
+    <label class="pag-link"></label>
     
 </section>
 
@@ -242,4 +283,3 @@
     </div>
   </footer></body>
 </html>
-
