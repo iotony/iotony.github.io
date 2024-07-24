@@ -10,12 +10,12 @@
     <title>IOTONY</title>
     <meta name="description"
         content="Welcome to IOTONY, the personal blog of Tianning Wang">
-    <link rel="canonical" href="https://iotony.github.io" />
+    <link rel="canonical" href="https://iotony.github.io/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     
     <link rel="stylesheet" href="http://localhost:1313/scss/style.min.aa7209164f013c6883aa54384ea45a46e582eacf9a17e9565badebd557dd1059.css">
 
-    <meta property="og:url" content="http://localhost:1313/">
+    <meta property="og:url" content="https://iotony.github.io/">
   <meta property="og:site_name" content="IOTONY">
   <meta property="og:title" content="IOTONY">
   <meta property="og:description" content="Welcome to IOTONY, the personal blog of Tianning Wang">
@@ -88,7 +88,7 @@
 
         @media (max-width: 768px) {
             .type-writer {
-                font-size: 18px;
+                font-size: 14px;
             }
         }
 
@@ -106,7 +106,7 @@
 
             
             <a id="theme-toggle" class="theme-toggle" href="#">
-                <img src="svg\sun.svg" alt="sun icon" class="theme-icon" />
+                <img src="svg\\sun.svg" alt="sun icon" class="theme-icon" />
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -162,11 +162,11 @@
         let themeIcon = document.querySelector(".theme-icon");
         if (theme === "dark") {
             body.classList.add("dark-mode");
-            themeIcon.src = "svg\moon.svg";
+            themeIcon.src = "svg\\moon.svg";
             themeIcon.alt = "moon icon";
         } else {
             body.classList.remove("dark-mode");
-            themeIcon.src = "svg\sun.svg";
+            themeIcon.src = "svg\\sun.svg";
             themeIcon.alt = "sun icon";
         }
         
