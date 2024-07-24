@@ -4,7 +4,7 @@
 
 <head>
 	<meta name="generator" content="Hugo 0.129.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>IOTONY</title>
@@ -28,6 +28,17 @@
   <meta name="twitter:description" content="Welcome to IOTONY, the personal blog of Tianning Wang">
 
   <style>
+
+        body {
+            background-color: #fef9e7;
+            color: #000; 
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
         #home-title {
             text-transform: none;
         }
@@ -74,6 +85,13 @@
             from, to { border-color: transparent; }
             50% { border-color: black; }
         }
+
+        @media (max-width: 768px) {
+            .type-writer {
+                font-size: 18px;
+            }
+        }
+
   </style>
     
 
@@ -88,7 +106,7 @@
 
             
             <a id="theme-toggle" class="theme-toggle" href="#">
-                <img src="D:\Hugo\myblog\public\svg\sun.svg" alt="sun icon" class="theme-icon" />
+                <img src="svg\sun.svg" alt="sun icon" class="theme-icon" />
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -144,11 +162,11 @@
         let themeIcon = document.querySelector(".theme-icon");
         if (theme === "dark") {
             body.classList.add("dark-mode");
-            themeIcon.src = "D:\Hugo\myblog\public\svg\moon.svg";
+            themeIcon.src = "svg\moon.svg";
             themeIcon.alt = "moon icon";
         } else {
             body.classList.remove("dark-mode");
-            themeIcon.src = "D:\Hugo\myblog\public\svg\sun.svg";
+            themeIcon.src = "svg\sun.svg";
             themeIcon.alt = "sun icon";
         }
         
