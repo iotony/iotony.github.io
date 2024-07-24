@@ -27,8 +27,8 @@
 
   <style>
         .author-avatar {
-            width: 5%;
-            height: 5%;
+            width: 10%;
+            height: 10%;
             border-radius: 50%;
             object-fit: cover;
         }        
@@ -171,7 +171,8 @@
                         const delayBetweenTexts = 1500; // delay between texts in milliseconds
 
                         const typedTextElement = document.getElementById('typed-text');
-
+                        typedTextElement.style.setProperty('--characters', typedTextElement.innerHTML.length);
+<!--
                         function type() {
                             if (currentChar < texts[currentText].length) {
                                 typedTextElement.textContent += texts[currentText].charAt(currentChar);
@@ -188,6 +189,7 @@
                         }
 
                         type();
+-->                        
                     </script>
 
                     <div class="social-icon">
